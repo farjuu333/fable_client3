@@ -23,8 +23,9 @@ import {
   Image,
 } from "lucide-react";
 import DashboardTopBar from "@/Components/DashboardTopBar";
+import { ImBook } from "react-icons/im";
 
-import Logo from "@/image/logo.png";
+
 
 export default function DashboardLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -70,7 +71,7 @@ export default function DashboardLayout({ children }) {
 
   const userRole = session.user?.role || "user";
 
-  // Sidebar links based on role
+
   const getSidebarLinks = () => {
     switch (userRole) {
       case "admin":
@@ -169,16 +170,9 @@ export default function DashboardLayout({ children }) {
         {/* Sidebar Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-100">
           <Link href="/" className="flex items-center ">
-            <Image
-              src={Logo}
-              width={40}
-              height={40}
-              alt="Fable"
-              className="h-10 w-auto"
-              onError={(e) => {
-                e.target.style.display = "none";
-              }}
-            />
+           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0070F3]/10 text-emerald-800">
+                             <ImBook className="text-xl" />
+                           </div>
             <span className="text-2xl font-bold text-emerald-800">Fable</span>
           </Link>
           <button
