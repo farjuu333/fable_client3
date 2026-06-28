@@ -4,3 +4,4 @@ Fable is a digital ecosystem designed to bridge the gap between creative writers
 Key Features (client)
 Role-Based Dynamic Dashboard: A centralized control hub where users, writers, and admins have customized views based on their roles.
 Advanced Discovery Engine: A robust "Browse Ebooks" page featuring real-time search, multi-layered filtering (by genre, price, availability), and sorting (newest, price range).
+Secure Payment Integration: Seamless integration with Stripe Checkout for purchasing ebooks, including post-payment status updates and transaction tracking.
