@@ -7,3 +7,4 @@ Advanced Discovery Engine: A robust "Browse Ebooks" page featuring real-time sea
 Secure Payment Integration: Seamless integration with Stripe Checkout for purchasing ebooks, including post-payment status updates and transaction tracking.
 Interactive Ebook Details: A dedicated page for each ebook with a clean UI, displaying comprehensive information, and enabling actions like purchasing or bookmarking.
 Writer's Creative Suite: An intuitive form-based interface for writers to manage their portfolio, upload covers (via ImgBB), and toggle between published/unpublished status.
+Admin Analytics & Control: Visual representation of data using charts (sales, revenue) and administrative tools to manage users, roles, and content.
