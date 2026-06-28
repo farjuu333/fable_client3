@@ -66,6 +66,7 @@ export default function AddEbookPage() {
     // Upload image first
     let coverImage = "";
     if (image) {
+      console.log("📤 Uploading image...");
       coverImage = await uploadImage();
     }
 
