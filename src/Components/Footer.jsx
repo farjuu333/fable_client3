@@ -15,11 +15,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center text-white font-black text-base shadow-sm">
+              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-emerald-800 font-black text-base shadow-sm">
                 F
               </div>
               <span className="text-lg font-extrabold tracking-tight text-white">
-                Fable<span className="text-indigo-500">.</span>
+                Fable
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
