@@ -11,7 +11,7 @@ export default function AdminUsersPage() {
   const [loading, setLoading] = useState(true);
 
   const fetchUsers = () => {
-    fetch("http://localhost:5000/api/dashboard/users")
+    fetch("https://fable-server3.onrender.com/api/dashboard/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(Array.isArray(data) ? data : []);
@@ -25,7 +25,7 @@ export default function AdminUsersPage() {
   }, []);
 
   const handleRoleChange = async (email, newRole) => {
-    await fetch("http://localhost:5000/api/admin/users/role", {
+    await fetch("https://fable-server3.onrender.com/api/admin/users/role", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, role: newRole }),
@@ -36,7 +36,7 @@ export default function AdminUsersPage() {
   const handleDelete = async (email) => {
     if (confirm("Are you sure you want to delete this user?")) {
       await fetch(
-        `http://localhost:5000/api/admin/users?email=${email}`,
+        `https://fable-server3.onrender.com/api/admin/users?email=${email}`,
         {
           method: "DELETE",
         },

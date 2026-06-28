@@ -12,7 +12,7 @@ export default function WriterEbooksPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `http://localhost:5000/api/dashboard/writer/ebooks?writerEmail=${session.user.email}`,
+        `https://fable-server3.onrender.com/api/dashboard/writer/ebooks?writerEmail=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -46,7 +46,7 @@ export default function WriterEbooksPage() {
         }}
         onDelete={async (id) => {
           await fetch(
-            `http://localhost:5000/api/ebooks/${id}`,
+            `https://fable-server3.onrender.com/api/ebooks/${id}`,
             {
               method: "DELETE",
             },

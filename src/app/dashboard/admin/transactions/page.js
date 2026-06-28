@@ -10,7 +10,7 @@ export default function AdminTransactionsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/dashboard/transactions")
+    fetch("https://fable-server3.onrender.com/api/dashboard/transactions")
       .then((res) => res.json())
       .then((data) => {
         setTransactions(Array.isArray(data) ? data : []);

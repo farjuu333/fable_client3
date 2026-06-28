@@ -14,7 +14,7 @@ export default function WriterBookmarksPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `http://localhost:5000/api/bookmarks?email=${session.user.email}`,
+        `https://fable-server3.onrender.com/api/bookmarks?email=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {

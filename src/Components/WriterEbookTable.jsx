@@ -33,7 +33,7 @@ export default function WriterEbookTable({ ebooks, onUpdate, onDelete }) {
   const handleUpdate = async () => {
     setSaving(true);
     await fetch(
-      `http://localhost:5000/api/ebooks/${editModal}`,
+      `https://fable-server3.onrender.com/api/ebooks/${editModal}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },

@@ -28,7 +28,7 @@ export default function EbookDetailsPage() {
   // Fetch ebook data
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/api/ebooks/${id}`)
+    fetch(`https://fable-server3.onrender.com/api/ebooks/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data._id) {
@@ -48,7 +48,7 @@ export default function EbookDetailsPage() {
   useEffect(() => {
     if (session?.user?.email && ebook?._id) {
       fetch(
-        `http://localhost:5000/api/bookmarks?email=${session.user.email}`,
+        `https://fable-server3.onrender.com/api/bookmarks?email=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -94,14 +94,14 @@ export default function EbookDetailsPage() {
     try {
       if (isBookmarked) {
         await fetch(
-          `http://localhost:5000/api/bookmarks?email=${email}&ebookId=${ebook._id}`,
+          `https://fable-server3.onrender.com/api/bookmarks?email=${email}&ebookId=${ebook._id}`,
           {
             method: "DELETE",
           },
         );
         setIsBookmarked(false);
       } else {
-        await fetch("http://localhost:5000/api/bookmarks", {
+        await fetch("https://fable-server3.onrender.com/api/bookmarks", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, ebookId: ebook._id }),

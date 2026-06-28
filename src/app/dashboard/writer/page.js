@@ -43,7 +43,7 @@ export default function AddEbookPage() {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/upload",
+        "https://fable-server3.onrender.com/api/upload",
         {
           method: "POST",
           body: formData,
@@ -71,7 +71,7 @@ export default function AddEbookPage() {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/ebooks",
+        "https://fable-server3.onrender.com/api/ebooks",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

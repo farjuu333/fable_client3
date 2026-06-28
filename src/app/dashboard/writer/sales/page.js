@@ -11,7 +11,7 @@ export default function SalesHistoryPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `http://localhost:5000/api/dashboard/writer/sales?writerEmail=${session.user.email}`,
+        `https://fable-server3.onrender.com/api/dashboard/writer/sales?writerEmail=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {

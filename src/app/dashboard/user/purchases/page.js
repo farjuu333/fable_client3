@@ -12,7 +12,7 @@ export default function PurchaseHistoryPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `http://localhost:5000/api/dashboard/user/purchases?email=${session.user.email}`,
+        `https://fable-server3.onrender.com/api/dashboard/user/purchases?email=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {

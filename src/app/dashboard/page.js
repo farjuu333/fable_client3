@@ -35,7 +35,7 @@ export default function BrowsePage() {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `http://localhost:5000/api/ebooks?page=${currentPage}&limit=${itemsPerPage}&sort=${sort}&genre=${genre}&search=${search}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
+      `https://fable-server3.onrender.com/api/ebooks?page=${currentPage}&limit=${itemsPerPage}&sort=${sort}&genre=${genre}&search=${search}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
     )
       .then((res) => res.json())
       .then((data) => {

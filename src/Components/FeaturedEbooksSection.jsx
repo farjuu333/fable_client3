@@ -9,7 +9,7 @@ export default function FeaturedEbooksSection() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/ebooks/featured")
+    fetch("https://fable-server3.onrender.com/api/ebooks/featured")
       .then((res) => res.json())
       .then((data) => {
         setEbooks(Array.isArray(data) ? data : []);
