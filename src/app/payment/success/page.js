@@ -13,7 +13,7 @@ export default function PaymentSuccess() {
 
   useEffect(() => {
     if (sessionId) {
-      fetch("https://fable-server3.onrender.com/api/complete-purchase", {
+      fetch("http://localhost:5000/api/complete-purchase", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ session_id: sessionId }),

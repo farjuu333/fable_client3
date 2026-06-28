@@ -29,7 +29,7 @@ const Hero = () => {
             className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-100/60 text-indigo-600 rounded-full text-xs font-semibold tracking-wide border border-indigo-200/30">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-100/60 text-emerald-800 rounded-full text-xs font-semibold tracking-wide border border-indigo-200/30">
               <Sparkles className="w-3 h-3" />
               <span>Discover Original Ebooks</span>
             </div>

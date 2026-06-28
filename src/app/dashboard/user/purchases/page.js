@@ -12,7 +12,7 @@ export default function PurchaseHistoryPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `https://fable-server3.onrender.com/api/dashboard/user/purchases?email=${session.user.email}`,
+        `http://localhost:5000/api/dashboard/user/purchases?email=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -26,7 +26,7 @@ export default function PurchaseHistoryPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }

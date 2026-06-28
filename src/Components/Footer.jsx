@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800 mt-auto">
+    <footer className="bg-emerald-700 text-gray-300 border-t border-gray-800 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -75,7 +75,7 @@ export default function Footer() {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all"
+                className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-emerald-800 hover:text-white transition-all"
                 aria-label="Facebook"
               >
                 <svg
@@ -88,7 +88,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all"
+                className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-emerald-800 hover:text-white transition-all"
                 aria-label="Twitter"
               >
                 <svg
@@ -101,7 +101,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all"
+                className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center hover:bg-emerald-800 hover:text-white transition-all"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -134,7 +134,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-4 py-2 rounded-lg shadow-sm transition-all whitespace-nowrap"
+                className="bg-emerald-800 hover:bg-indigo-700 text-white font-bold text-sm px-4 py-2 rounded-lg shadow-sm transition-all whitespace-nowrap"
               >
                 Join
               </button>

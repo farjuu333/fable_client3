@@ -53,7 +53,7 @@ export default function EbookTable({
                       {ebook.title}
                     </td>
                     <td className="p-3 text-gray-500">{ebook.writerName}</td>
-                    <td className="p-3 font-semibold text-indigo-600">
+                    <td className="p-3 font-semibold text-emerald-800">
                       ${ebook.price}
                     </td>
                     <td className="p-3 text-gray-500">
@@ -69,7 +69,7 @@ export default function EbookTable({
                     <td className="p-3">
                       <Link
                         href={`/ebooks/${ebook._id}`}
-                        className="text-indigo-600 hover:text-indigo-800"
+                        className="text-emerald-800 hover:text-indigo-800"
                       >
                         <Eye className="w-4 h-4" />
                       </Link>
@@ -85,7 +85,7 @@ export default function EbookTable({
                     {emptyMessage}{" "}
                     <Link
                       href="/browse"
-                      className="text-indigo-600 hover:underline"
+                      className="text-emerald-800 hover:underline"
                     >
                       Browse Ebooks
                     </Link>

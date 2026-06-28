@@ -10,7 +10,7 @@ export default function AdminTransactionsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://fable-server3.onrender.com/api/dashboard/transactions")
+    fetch("http://localhost:5000/api/dashboard/transactions")
       .then((res) => res.json())
       .then((data) => {
         setTransactions(Array.isArray(data) ? data : []);
@@ -22,7 +22,7 @@ export default function AdminTransactionsPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -37,7 +37,7 @@ export default function AdminTransactionsPage() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <DollarSign className="w-7 h-7 text-indigo-600" />
+            <DollarSign className="w-7 h-7 text-emerald-800" />
             All Transactions
           </h1>
           <p className="text-gray-500 text-sm mt-1">

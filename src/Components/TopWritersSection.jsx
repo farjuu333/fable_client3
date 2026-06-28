@@ -41,7 +41,7 @@ export default function TopWritersSection() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Top <span className="text-indigo-600">Writers</span>
+            Our Top <span className="text-emerald-800">Writers</span>
           </h2>
           <p className="text-gray-500">
             Industry-leading voices shaping the world of literature.

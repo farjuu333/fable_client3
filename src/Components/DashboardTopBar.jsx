@@ -48,7 +48,7 @@ export default function DashboardTopBar() {
               className="w-10 h-10 rounded-full border-2 border-indigo-400"
             />
           ) : (
-            <div className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm">
+            <div className="w-10 h-10 rounded-full bg-emerald-800 text-white flex items-center justify-center font-bold text-sm">
               {firstName[0].toUpperCase()}
             </div>
           )}

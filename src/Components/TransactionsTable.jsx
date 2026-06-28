@@ -41,7 +41,7 @@ export default function TransactionsTable({ transactions }) {
                 </span>
               </td>
               <td className="p-3 text-gray-700">{txn.ebookTitle || "-"}</td>
-              <td className="p-3 font-semibold text-indigo-600">
+              <td className="p-3 font-semibold text-emerald-800">
                 ${txn.amount}
               </td>
               <td className="p-3 text-gray-500">

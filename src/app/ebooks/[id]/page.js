@@ -28,7 +28,7 @@ export default function EbookDetailsPage() {
   // Fetch ebook data
   useEffect(() => {
     setLoading(true);
-    fetch(`https://fable-server3.onrender.com/api/ebooks/${id}`)
+    fetch(`http://localhost:5000/api/ebooks/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data._id) {
@@ -48,7 +48,7 @@ export default function EbookDetailsPage() {
   useEffect(() => {
     if (session?.user?.email && ebook?._id) {
       fetch(
-        `https://fable-server3.onrender.com/api/bookmarks?email=${session.user.email}`,
+        `http://localhost:5000/api/bookmarks?email=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -94,14 +94,14 @@ export default function EbookDetailsPage() {
     try {
       if (isBookmarked) {
         await fetch(
-          `https://fable-server3.onrender.com/api/bookmarks?email=${email}&ebookId=${ebook._id}`,
+          `http://localhost:5000/api/bookmarks?email=${email}&ebookId=${ebook._id}`,
           {
             method: "DELETE",
           },
         );
         setIsBookmarked(false);
       } else {
-        await fetch("https://fable-server3.onrender.com/api/bookmarks", {
+        await fetch("http://localhost:5000/api/bookmarks", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, ebookId: ebook._id }),
@@ -152,7 +152,7 @@ export default function EbookDetailsPage() {
           </p>
           <Link
             href="/browse"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-800 text-white font-semibold rounded-xl hover:bg-indigo-700 transition"
           >
             <BookOpen className="w-5 h-5" />
             Browse Ebooks
@@ -173,7 +173,7 @@ export default function EbookDetailsPage() {
       <div className="max-w-4xl mx-auto px-4 pt-6">
         <Link
           href="/browse"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-emerald-800 transition"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Browse
@@ -222,7 +222,7 @@ export default function EbookDetailsPage() {
                     >
                       {ebook.sold ? "Sold" : "Available"}
                     </span>
-                    <span className="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full border border-indigo-200">
+                    <span className="px-3 py-1 bg-indigo-50 text-emerald-800 text-xs font-semibold rounded-full border border-indigo-200">
                       {ebook.genre}
                     </span>
                   </div>
@@ -259,7 +259,7 @@ export default function EbookDetailsPage() {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4 border-t border-gray-100">
                   <div>
                     <p className="text-sm text-gray-500">Price</p>
-                    <p className="text-3xl font-bold text-indigo-600">
+                    <p className="text-3xl font-bold text-emerald-800">
                       ${ebook.price}
                     </p>
                   </div>
@@ -269,7 +269,7 @@ export default function EbookDetailsPage() {
                       <button
                         onClick={handlePurchase}
                         disabled={isPurchasing}
-                        className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all shadow-lg disabled:opacity-50"
+                        className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-8 py-3 bg-emerald-800 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all shadow-lg disabled:opacity-50"
                       >
                         {isPurchasing ? (
                           <>
@@ -293,7 +293,7 @@ export default function EbookDetailsPage() {
 
                     <button
                       onClick={handleBookmark}
-                      className={`p-3 rounded-xl border-2 transition-all ${isBookmarked ? "border-indigo-600 bg-indigo-50 text-indigo-600" : "border-gray-200 bg-white text-gray-400 hover:border-indigo-300"}`}
+                      className={`p-3 rounded-xl border-2 transition-all ${isBookmarked ? "border-emerald-800 bg-indigo-50 text-emerald-800" : "border-gray-200 bg-white text-gray-400 hover:border-indigo-300"}`}
                     >
                       {isBookmarked ? (
                         <BookmarkCheck className="w-5 h-5" />

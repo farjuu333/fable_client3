@@ -14,7 +14,7 @@ export default function WriterBookmarksPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `https://fable-server3.onrender.com/api/bookmarks?email=${session.user.email}`,
+        `http://localhost:5000/api/bookmarks?email=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -28,7 +28,7 @@ export default function WriterBookmarksPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -71,14 +71,14 @@ export default function WriterBookmarksPage() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-bold text-sm text-gray-900 line-clamp-2 group-hover:text-indigo-600">
+                    <h3 className="font-bold text-sm text-gray-900 line-clamp-2 group-hover:text-emerald-800">
                       {ebook.title}
                     </h3>
                     <p className="text-xs text-gray-500 mt-1">
                       {ebook.writerName}
                     </p>
                     <div className="mt-3 flex justify-between items-center">
-                      <span className="text-indigo-600 font-bold text-sm">
+                      <span className="text-emerald-800 font-bold text-sm">
                         ${ebook.price}
                       </span>
                       <span className="text-yellow-500">

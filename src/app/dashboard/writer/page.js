@@ -43,7 +43,7 @@ export default function AddEbookPage() {
 
     try {
       const res = await fetch(
-        "https://fable-server3.onrender.com/api/upload",
+        "http://localhost:5000/api/upload",
         {
           method: "POST",
           body: formData,
@@ -71,7 +71,7 @@ export default function AddEbookPage() {
 
     try {
       const res = await fetch(
-        "https://fable-server3.onrender.com/api/ebooks",
+        "http://localhost:5000/api/ebooks",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -108,7 +108,7 @@ export default function AddEbookPage() {
     <div>
       <Link
         href="/dashboard/writer"
-        className="inline-flex items-center gap-2 text-gray-600 hover:text-indigo-600 mb-4"
+        className="inline-flex items-center gap-2 text-gray-600 hover:text-emerald-800 mb-4"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Dashboard
@@ -231,14 +231,14 @@ export default function AddEbookPage() {
               )}
             </label>
             {uploading && (
-              <p className="text-xs text-indigo-600 mt-1">Uploading image...</p>
+              <p className="text-xs text-emerald-800 mt-1">Uploading image...</p>
             )}
           </div>
 
           <button
             type="submit"
             disabled={loading || uploading}
-            className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition flex items-center gap-2 disabled:opacity-50 w-full justify-center"
+            className="px-6 py-3 bg-emerald-800 text-white font-semibold rounded-xl hover:bg-indigo-700 transition flex items-center gap-2 disabled:opacity-50 w-full justify-center"
           >
             {loading ? (
               <span className="loading loading-spinner loading-sm"></span>

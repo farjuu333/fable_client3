@@ -61,7 +61,7 @@ export default function DashboardLayout({ children }) {
   if (isPending) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -179,7 +179,7 @@ export default function DashboardLayout({ children }) {
                 e.target.style.display = "none";
               }}
             />
-            <span className="text-2xl font-bold text-indigo-600">Fable</span>
+            <span className="text-2xl font-bold text-emerald-800">Fable</span>
           </Link>
           <button
             onClick={() => setSidebarOpen(false)}
@@ -199,7 +199,7 @@ export default function DashboardLayout({ children }) {
                 className="w-10 h-10 rounded-full"
               />
             ) : (
-              <div className="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-full bg-emerald-800 text-white flex items-center justify-center font-bold">
                 {session.user.name?.[0]?.toUpperCase() || "U"}
               </div>
             )}
@@ -219,7 +219,7 @@ export default function DashboardLayout({ children }) {
               onClick={() => setSidebarOpen(false)}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition ${
                 pathname === link.href
-                  ? "bg-indigo-50 text-indigo-600"
+                  ? "bg-indigo-50 text-emerald-800"
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >

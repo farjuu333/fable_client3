@@ -9,7 +9,7 @@ export default function FeaturedEbooksSection() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://fable-server3.onrender.com/api/ebooks/featured")
+    fetch("http://localhost:5000/api/ebooks/featured")
       .then((res) => res.json())
       .then((data) => {
         setEbooks(Array.isArray(data) ? data : []);
@@ -24,7 +24,7 @@ export default function FeaturedEbooksSection() {
     return (
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+          <span className="loading loading-spinner loading-lg text-emerald-800"></span>
         </div>
       </section>
     );
@@ -40,7 +40,7 @@ export default function FeaturedEbooksSection() {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-indigo-600 font-semibold text-sm uppercase tracking-wider"
+            className="text-emerald-800 font-semibold text-sm uppercase tracking-wider"
           >
             ✦ Curated Collection
           </motion.span>
@@ -49,7 +49,7 @@ export default function FeaturedEbooksSection() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl font-bold text-gray-900 mt-2"
           >
-            Featured <span className="text-indigo-600">Ebooks</span>
+            Featured <span className="text-emerald-800">Ebooks</span>
           </motion.h2>
           <p className="text-gray-500 mt-3 max-w-md mx-auto">
             Handpicked stories from talented writers around the world
@@ -81,13 +81,13 @@ export default function FeaturedEbooksSection() {
                         📖
                       </span>
                     )}
-                    <div className="absolute inset-0 bg-indigo-600/0 group-hover:bg-indigo-600/10 transition-all duration-300 flex items-center justify-center">
-                      <Eye className="w-10 h-10 text-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-emerald-800/0 group-hover:bg-emerald-800/10 transition-all duration-300 flex items-center justify-center">
+                      <Eye className="w-10 h-10 text-emerald-800 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </div>
 
                   <div className="p-5 flex-grow">
-                    <h3 className="font-semibold text-base text-gray-900 truncate group-hover:text-indigo-600 transition-colors">
+                    <h3 className="font-semibold text-base text-gray-900 truncate group-hover:text-emerald-800 transition-colors">
                       {ebook.title}
                     </h3>
                     <p className="text-sm text-gray-500 mt-1">
@@ -95,10 +95,10 @@ export default function FeaturedEbooksSection() {
                     </p>
 
                     <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-50">
-                      <span className="badge badge-sm bg-indigo-50 text-indigo-600 border-indigo-200">
+                      <span className="badge badge-sm bg-indigo-50 text-emerald-800 border-indigo-200">
                         {ebook.genre}
                       </span>
-                      <span className="text-indigo-600 font-bold text-lg">
+                      <span className="text-emerald-800 font-bold text-lg">
                         ${ebook.price}
                       </span>
                     </div>
@@ -113,7 +113,7 @@ export default function FeaturedEbooksSection() {
         <div className="text-center mt-12">
           <Link
             href="/browse"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all shadow-lg shadow-indigo-200"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-emerald-800 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all shadow-lg shadow-indigo-200"
           >
             Browse All Ebooks
             <span>→</span>

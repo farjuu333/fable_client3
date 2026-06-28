@@ -12,7 +12,7 @@ export default function WriterEbooksPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `https://fable-server3.onrender.com/api/dashboard/writer/ebooks?writerEmail=${session.user.email}`,
+        `http://localhost:5000/api/dashboard/writer/ebooks?writerEmail=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -26,7 +26,7 @@ export default function WriterEbooksPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -46,7 +46,7 @@ export default function WriterEbooksPage() {
         }}
         onDelete={async (id) => {
           await fetch(
-            `https://fable-server3.onrender.com/api/ebooks/${id}`,
+            `http://localhost:5000/api/ebooks/${id}`,
             {
               method: "DELETE",
             },

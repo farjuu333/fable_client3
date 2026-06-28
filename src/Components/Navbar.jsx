@@ -42,7 +42,13 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
+        <div className="bg-emerald-800 text-white py-2.5  text-sm font-bold shadow-sm">
+        <marquee scrollamount="5" className="tracking-wide">
+          ✨ Welcome to Fable! Discover & Read Original Ebooks from Talented Global Writers 📚 | ✍️ Join as a Writer, Publish Your Masterpiece with Secure One-Time Verification Pay 🚀 | 💳 Fast, Safe & Seamless Transactions Powered by Stripe Gateway!
+        </marquee>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
 
@@ -57,7 +63,7 @@ const Navbar = () => {
                 e.target.style.display = "none";
               }}
             />
-            <span className="text-2xl font-bold text-indigo-600">Fable</span>
+            <span className="text-2xl font-bold text-emerald-800">Fable</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -65,20 +71,20 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-6">
               <Link
                 href="/"
-                className={`text-gray-700 hover:text-indigo-600 ${isActive("/") ? "text-indigo-600 font-semibold" : ""}`}
+                className={`text-gray-700 hover:text-emerald-800 ${isActive("/") ? "text-emerald-800 font-semibold" : ""}`}
               >
                 Home
               </Link>
               <Link
                 href="/browse"
-                className={`text-gray-700 hover:text-indigo-600 ${isActive("/browse") ? "text-indigo-600 font-semibold" : ""}`}
+                className={`text-gray-700 hover:text-emerald-800 ${isActive("/browse") ? "text-emerald-800 font-semibold" : ""}`}
               >
                 Browse Ebooks
               </Link>
               {isLoggedIn && (
                 <Link
                   href={getDashboardLink()}
-                  className={`text-gray-700 hover:text-indigo-600 ${isActive("/dashboard") ? "text-indigo-600 font-semibold" : ""}`}
+                  className={`text-gray-700 hover:text-emerald-800 ${isActive("/dashboard") ? "text-emerald-800 font-semibold" : ""}`}
                 >
                   Dashboard
                 </Link>
@@ -94,7 +100,7 @@ const Navbar = () => {
                         className="w-7 h-7 rounded-full border border-indigo-400"
                       />
                     ) : (
-                      <div className="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">
+                      <div className="w-7 h-7 rounded-full bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">
                         {firstName[0].toUpperCase()}
                       </div>
                     )}
@@ -115,13 +121,13 @@ const Navbar = () => {
                 <div className="flex items-center space-x-3">
                   <Link
                     href="/login"
-                    className="text-gray-700 hover:text-indigo-600 text-sm font-medium"
+                    className="text-gray-700 hover:text-emerald-800 text-sm font-medium"
                   >
                     Login
                   </Link>
                   <Link
                     href="/register"
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+                    className="bg-emerald-800 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
                   >
                     Register
                   </Link>
@@ -134,7 +140,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-indigo-600 cursor-pointer"
+              className="text-gray-700 hover:text-emerald-800 cursor-pointer"
             >
               <svg
                 className="w-6 h-6"
@@ -169,14 +175,14 @@ const Navbar = () => {
           <div className="px-4 py-3 space-y-3">
             <Link
               href="/"
-              className={`block ${isActive("/") ? "text-indigo-600 font-semibold" : "text-gray-700"}`}
+              className={`block ${isActive("/") ? "text-emerald-800 font-semibold" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/browse"
-              className={`block ${isActive("/browse") ? "text-indigo-600 font-semibold" : "text-gray-700"}`}
+              className={`block ${isActive("/browse") ? "text-emerald-800 font-semibold" : "text-gray-700"}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Browse Ebooks
@@ -185,7 +191,7 @@ const Navbar = () => {
             {isLoggedIn && (
               <Link
                 href={getDashboardLink()}
-                className={`block ${isActive("/dashboard") ? "text-indigo-600 font-semibold" : "text-gray-700"}`}
+                className={`block ${isActive("/dashboard") ? "text-emerald-800 font-semibold" : "text-gray-700"}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Dashboard
@@ -202,7 +208,7 @@ const Navbar = () => {
                       className="w-7 h-7 rounded-full"
                     />
                   ) : (
-                    <div className="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">
+                    <div className="w-7 h-7 rounded-full bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">
                       {firstName[0].toUpperCase()}
                     </div>
                   )}
@@ -231,7 +237,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/register"
-                  className="block bg-indigo-600 text-white px-4 py-2 rounded-lg text-center"
+                  className="block bg-emerald-800 text-white px-4 py-2 rounded-lg text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Register

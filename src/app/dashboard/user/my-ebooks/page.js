@@ -14,7 +14,7 @@ export default function MyEbooksPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `https://fable-server3.onrender.com/api/dashboard/user/purchases?email=${session.user.email}`,
+        `http://localhost:5000/api/dashboard/user/purchases?email=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -28,7 +28,7 @@ export default function MyEbooksPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -42,7 +42,7 @@ export default function MyEbooksPage() {
         </div>
         <Link
           href="/browse"
-          className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 bg-indigo-600 text-white rounded-xl text-sm font-semibold hover:bg-indigo-700 transition shadow-md shadow-indigo-200"
+          className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-800 text-white rounded-xl text-sm font-semibold hover:bg-indigo-700 transition shadow-md shadow-indigo-200"
         >
           <BookOpen className="w-4 h-4" />
           Browse More
@@ -82,7 +82,7 @@ export default function MyEbooksPage() {
 
                   {/* Info */}
                   <div className="p-4 flex flex-col flex-grow">
-                    <h3 className="font-bold text-sm text-gray-900 line-clamp-2 group-hover:text-indigo-600 transition-colors">
+                    <h3 className="font-bold text-sm text-gray-900 line-clamp-2 group-hover:text-emerald-800 transition-colors">
                       {ebook.title}
                     </h3>
                     <p className="text-xs text-gray-500 mt-1">
@@ -92,7 +92,7 @@ export default function MyEbooksPage() {
                       <span className="px-2.5 py-1 bg-green-50 text-green-700 rounded-full text-[11px] font-semibold">
                         Purchased
                       </span>
-                      <span className="text-indigo-600 font-bold text-sm">
+                      <span className="text-emerald-800 font-bold text-sm">
                         ${ebook.price}
                       </span>
                     </div>
@@ -120,7 +120,7 @@ export default function MyEbooksPage() {
           </p>
           <Link
             href="/browse"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition shadow-lg shadow-indigo-200"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-800 hover:bg-indigo-700 text-white font-semibold rounded-xl transition shadow-lg shadow-indigo-200"
           >
             <BookOpen className="w-5 h-5" />
             Browse Ebooks

@@ -3,7 +3,7 @@ import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
 const client = new MongoClient(process.env.MONGODB_URL);
-const db = client.db("fable_bd");
+const db = client.db("fable_client_db");
 
 await client.connect();
 
@@ -20,7 +20,7 @@ export const auth = betterAuth({
   },
   trustedOrigins: [
     "http://localhost:3000",
-    "https://fable-client-three.vercel.app",
+    
   ],
 
   user: {

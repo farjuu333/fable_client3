@@ -11,7 +11,7 @@ export default function SalesHistoryPage() {
   useEffect(() => {
     if (session?.user?.email) {
       fetch(
-        `https://fable-server3.onrender.com/api/dashboard/writer/sales?writerEmail=${session.user.email}`,
+        `http://localhost:5000/api/dashboard/writer/sales?writerEmail=${session.user.email}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -25,7 +25,7 @@ export default function SalesHistoryPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -41,7 +41,7 @@ export default function SalesHistoryPage() {
         </div>
         <div className="text-right">
           <p className="text-sm text-gray-500">Total Revenue</p>
-          <p className="text-2xl font-bold text-indigo-600">
+          <p className="text-2xl font-bold text-emerald-800">
             ${totalRevenue.toFixed(2)}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function SalesHistoryPage() {
                       {sale.title}
                     </td>
                     <td className="p-3 text-gray-500">{sale.buyerEmail}</td>
-                    <td className="p-3 text-indigo-600 font-semibold">
+                    <td className="p-3 text-emerald-800 font-semibold">
                       ${sale.price}
                     </td>
                     <td className="p-3 text-gray-500">

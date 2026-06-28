@@ -11,7 +11,7 @@ export default function AdminUsersPage() {
   const [loading, setLoading] = useState(true);
 
   const fetchUsers = () => {
-    fetch("https://fable-server3.onrender.com/api/dashboard/users")
+    fetch("http://localhost:5000/api/dashboard/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(Array.isArray(data) ? data : []);
@@ -25,7 +25,7 @@ export default function AdminUsersPage() {
   }, []);
 
   const handleRoleChange = async (email, newRole) => {
-    await fetch("https://fable-server3.onrender.com/api/admin/users/role", {
+    await fetch("http://localhost:5000/api/admin/users/role", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, role: newRole }),
@@ -36,7 +36,7 @@ export default function AdminUsersPage() {
   const handleDelete = async (email) => {
     if (confirm("Are you sure you want to delete this user?")) {
       await fetch(
-        `https://fable-server3.onrender.com/api/admin/users?email=${email}`,
+        `http://localhost:5000/api/admin/users?email=${email}`,
         {
           method: "DELETE",
         },
@@ -48,7 +48,7 @@ export default function AdminUsersPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -58,7 +58,7 @@ export default function AdminUsersPage() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-2">
-            <Users className="w-8 h-8 text-indigo-600" />
+            <Users className="w-8 h-8 text-emerald-800" />
             Manage Users
           </h1>
           <p className="text-gray-500 mt-1">
@@ -79,7 +79,7 @@ export default function AdminUsersPage() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-lg">
+                  <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-emerald-800 font-bold text-lg">
                     {user.name?.charAt(0)?.toUpperCase() || "U"}
                   </div>
                   <div>

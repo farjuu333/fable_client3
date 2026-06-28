@@ -33,7 +33,7 @@ export default function WriterEbookTable({ ebooks, onUpdate, onDelete }) {
   const handleUpdate = async () => {
     setSaving(true);
     await fetch(
-      `https://fable-server3.onrender.com/api/ebooks/${editModal}`,
+      `http://localhost:5000/api/ebooks/${editModal}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -84,7 +84,7 @@ export default function WriterEbookTable({ ebooks, onUpdate, onDelete }) {
                         {ebook.status}
                       </span>
                     </td>
-                    <td className="p-3 text-indigo-600 font-semibold">
+                    <td className="p-3 text-emerald-800 font-semibold">
                       ${ebook.price}
                     </td>
                     <td className="p-3">{ebook.salesCount || 0}</td>
@@ -95,7 +95,7 @@ export default function WriterEbookTable({ ebooks, onUpdate, onDelete }) {
                       <div className="flex gap-2">
                         <button
                           onClick={() => openEdit(ebook)}
-                          className="text-xs text-indigo-600 hover:underline cursor-pointer"
+                          className="text-xs text-emerald-800 hover:underline cursor-pointer"
                         >
                           Edit
                         </button>

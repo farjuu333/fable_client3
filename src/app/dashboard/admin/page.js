@@ -10,7 +10,7 @@ export default function AdminEbooksPage() {
   const [loading, setLoading] = useState(true);
 
   const fetchEbooks = () => {
-    fetch("https://fable-server3.onrender.com/api/admin/ebooks")
+    fetch("http://localhost:5000/api/admin/ebooks")
       .then((res) => res.json())
       .then((data) => {
         setEbooks(Array.isArray(data) ? data : []);
@@ -25,7 +25,7 @@ export default function AdminEbooksPage() {
 
   const toggleStatus = async (id) => {
     await fetch(
-      `https://fable-server3.onrender.com/api/admin/ebooks/${id}/toggle-status`,
+      `http://localhost:5000/api/admin/ebooks/${id}/toggle-status`,
       {
         method: "PUT",
       },
@@ -36,7 +36,7 @@ export default function AdminEbooksPage() {
   const handleDelete = async (id) => {
     if (confirm("Delete this ebook?")) {
       await fetch(
-        `https://fable-server3.onrender.com/api/admin/ebooks/${id}`,
+        `http://localhost:5000/api/admin/ebooks/${id}`,
         {
           method: "DELETE",
         },
@@ -48,7 +48,7 @@ export default function AdminEbooksPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-20">
-        <span className="loading loading-spinner loading-lg text-indigo-600"></span>
+        <span className="loading loading-spinner loading-lg text-emerald-800"></span>
       </div>
     );
   }
@@ -57,7 +57,7 @@ export default function AdminEbooksPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-          <BookOpen className="w-7 h-7 text-indigo-600" />
+          <BookOpen className="w-7 h-7 text-emerald-800" />
           All Ebooks
         </h1>
         <p className="text-gray-500 text-sm">Total: {ebooks.length}</p>
@@ -88,7 +88,7 @@ export default function AdminEbooksPage() {
                     {ebook.title}
                   </td>
                   <td className="p-3 text-gray-600">{ebook.writerName}</td>
-                  <td className="p-3 font-semibold text-indigo-600">
+                  <td className="p-3 font-semibold text-emerald-800">
                     ${ebook.price}
                   </td>
                   <td className="p-3">
@@ -115,7 +115,7 @@ export default function AdminEbooksPage() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => toggleStatus(ebook._id)}
-                        className="text-indigo-600 hover:text-indigo-800"
+                        className="text-emerald-800 hover:text-indigo-800"
                         title={
                           ebook.status === "published" ? "Unpublish" : "Publish"
                         }
