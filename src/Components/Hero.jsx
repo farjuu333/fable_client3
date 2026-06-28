@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Sparkles, ChevronRight } from "lucide-react";
-import HeroImage from '@/image/hero_Image.png';
+import HeroImage from '../image/hero_Image .png';
 
 const Hero = () => {
   return (
@@ -40,7 +40,7 @@ const Hero = () => {
               <br />
               Next Great
               <br />
-              <span className="text-[#4F46E5]">Read</span>
+              <span className="text-emerald-800">Read</span>
             </h1>
 
             {/* Description */}
