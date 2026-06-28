@@ -47,7 +47,7 @@ export default function PaymentSuccess() {
             <p className="text-gray-500 mt-2">
               your ebook added to dashboard
             </p>
-            <Link href="/dashboard/user" className="btn btn-secondary mt-6">
+            <Link href="/dashboard/user" className="btn bg-emerald-800 text-white mt-6">
               Go to Dashboard
             </Link>
           </>
