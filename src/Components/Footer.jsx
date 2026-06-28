@@ -23,8 +23,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Fable is a premium digital platform connecting indie ebook writers
-              with passionate global readers.
+             A premium digital platform connecting indie ebook writers with passionate global readers.
             </p>
           </div>
 
@@ -146,7 +145,7 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} Fable Platform. All rights reserved.
           </p>
-          <p>Designed for Recruiters with ❤️</p>
+          <p>created for all user.</p>
         </div>
       </div>
     </footer>
