@@ -5,3 +5,4 @@ Key Features (client)
 Role-Based Dynamic Dashboard: A centralized control hub where users, writers, and admins have customized views based on their roles.
 Advanced Discovery Engine: A robust "Browse Ebooks" page featuring real-time search, multi-layered filtering (by genre, price, availability), and sorting (newest, price range).
 Secure Payment Integration: Seamless integration with Stripe Checkout for purchasing ebooks, including post-payment status updates and transaction tracking.
+Interactive Ebook Details: A dedicated page for each ebook with a clean UI, displaying comprehensive information, and enabling actions like purchasing or bookmarking.
