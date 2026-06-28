@@ -4,35 +4,36 @@ import { Star, BookOpen, TrendingUp } from "lucide-react";
 
 const writers = [
   {
-    name: "Sarah Johnson",
-    avatar: "S",
-    sales: 1230,
-    genre: "Fiction",
-    rating: 4.9,
-    ebooks: 24,
-    bio: "Bestselling fiction author",
-    gradient: "from-violet-500 to-purple-600",
-  },
-  {
-    name: "Mike Chen",
-    avatar: "M",
-    sales: 980,
-    genre: "Sci-Fi",
-    rating: 4.8,
-    ebooks: 18,
-    bio: "Award-winning sci-fi writer",
-    gradient: "from-blue-500 to-cyan-600",
-  },
-  {
-    name: "Emma Davis",
+    name: "Eleanor Vance",
     avatar: "E",
-    sales: 850,
-    genre: "Romance",
-    rating: 4.7,
-    ebooks: 31,
-    bio: "Romance specialist",
-    gradient: "from-pink-500 to-rose-600",
+    sales: 1450,
+    genre: "Gothic Horror",
+    rating: 4.9,
+    ebooks: 28,
+    bio: "Master of atmospheric suspense and dark folklore.",
+    gradient: "from-slate-700 to-gray-900",
   },
+  {
+    name: "Julian Sterling",
+    avatar: "J",
+    sales: 1120,
+    genre: "Cyberpunk",
+    rating: 4.8,
+    ebooks: 15,
+    bio: "Exploring digital dystopias and human evolution.",
+    gradient: "from-blue-600 to-indigo-700",
+  },
+  
+  {
+    name: "Liam Thorne",
+    avatar: "L",
+    sales: 870,
+    genre: "Historical Fiction",
+    rating: 4.7,
+    ebooks: 35,
+    bio: "Bringing forgotten eras back to vivid life.",
+    gradient: "from-emerald-600 to-teal-700",
+  }
 ];
 
 export default function TopWritersSection() {
@@ -41,11 +42,11 @@ export default function TopWritersSection() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Top <span className="text-emerald-800">Writers</span>
+            Top <span className="text-emerald-800">Writers</span>
           </h2>
-          <p className="text-gray-500">
-            Industry-leading voices shaping the world of literature.
-          </p>
+         <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+    Meet the master storytellers and creative minds behind Fable's most acclaimed literary works.
+  </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
